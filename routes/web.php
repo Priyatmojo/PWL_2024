@@ -46,3 +46,5 @@ Route::get('/user/{name?}', function ($name='jhon') {
 Route::resource('photos', PhotoController::class) ->only(['index','show']);
 
 Route::resource('photos', PhotoController::class) ->except(['create','store','update','destroy']);
+
+Route::get('/greeting', [WelcomController::class, 'greeting']);
